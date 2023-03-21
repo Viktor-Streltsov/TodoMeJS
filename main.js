@@ -15,14 +15,20 @@ btn.addEventListener('click', function() {
         input.value = '';
     };
     let edits = document.querySelectorAll('.edit');
-    let textLis = document.querySelectorAll('.text-li');
-    for(let elem of edits) {
+    edits.forEach(function(elem) {
         elem.addEventListener('click', function() {
-            for(let texLi of textLis) {
-                if(texLi.dataset.text === elem.dataset.btn) {
-                    console.log(texLi);
-                }
+            let inp = document.createElement('input');
+            if(this.li.children[0].dataset.text === this.li.children[1].dataset.btn) {
+                inp.value = this.li.children[0].textContent;
+                this.li.children[0].textContent = '';
+                this.li.children[0].append(inp);
+                this.disabled = true;
             }
-        });
-    }
+            console.log(li)
+            inp.addEventListener('blur', function() {
+                this.li.children[0].textContent = inp.value;
+                this.disabled = false;
+            });
+        })
+    })
 })
