@@ -9,7 +9,7 @@ let count = 0;
 btn.addEventListener('click', function() {
     let li = document.createElement('li');
     if(input.value !== '') {
-        li.innerHTML = `<span class="text-li" data-text=${count}>${input.value}</span> <button class="edit" data-btn=${count}>Editing</button> <button class="clear">Clear</button>`;
+        li.innerHTML = `<span class="text-li">${input.value}</span> <button class="edit">Editing</button> <button class="clear">Clear</button>`;
         count++;
         block.append(li);
         input.value = '';
@@ -24,6 +24,9 @@ btn.addEventListener('click', function() {
     inp.addEventListener('blur', function() {
         li.children[0].textContent = this.value;
         li.children[1].disabled = false;
+    })
+    li.children[2].addEventListener('click', function() {
+        li.children[0].classList.toggle('active');
     })
 });
 

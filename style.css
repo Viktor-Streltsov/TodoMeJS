@@ -1,9 +1,23 @@
 body {
     box-sizing: border-box;
+    font-size: 100%;
+}
+
+li {
+    list-style: none;
+    padding: 0;
+    border: 2px solid;
+    width: 35rem;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .wrapper {
-    width: 980px;
+    border: 2px solid red;
+    width: 70rem;
     margin: 0 auto;
 }
 
@@ -12,7 +26,7 @@ body {
 }
 
 .block-input {
-    margin: 20px 0px;
+    margin: 2em 0px;
 }
 
 .block-submit {
@@ -22,5 +36,32 @@ body {
 }
 
 .topical {
-    margin: 0px 20px;
+    margin: 0px 2em;
+}
+
+.block-text{
+    border: 2px solid blue;
+    padding: 0;
+}
+
+.text-li {
+    display: inline-block;
+    border: 2px solid;
+    width: 25rem;
+    height: auto;
+    word-break: break-all;
+}
+
+.edit {
+    position: absolute;
+    right: 4rem;
+}
+
+.clear {
+    position: absolute;
+    right: 0;
+}
+
+.active {
+    text-decoration: line-through;
 }
