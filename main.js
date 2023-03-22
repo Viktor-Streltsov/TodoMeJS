@@ -14,21 +14,16 @@ btn.addEventListener('click', function() {
         block.append(li);
         input.value = '';
     };
-    let edits = document.querySelectorAll('.edit');
-    edits.forEach(function(elem) {
-        elem.addEventListener('click', function() {
-            let inp = document.createElement('input');
-            if(this.li.children[0].dataset.text === this.li.children[1].dataset.btn) {
-                inp.value = this.li.children[0].textContent;
-                this.li.children[0].textContent = '';
-                this.li.children[0].append(inp);
-                this.disabled = true;
-            }
-            console.log(li)
-            inp.addEventListener('blur', function() {
-                this.li.children[0].textContent = inp.value;
-                this.disabled = false;
-            });
-        })
+    let inp = document.createElement('input');
+    li.children[1].addEventListener('click', function() {
+        inp.value = li.children[0].textContent;
+        li.children[0].textContent = '';
+        li.children[0].append(inp);
+        li.children[1].disabled = true;
+    });
+    inp.addEventListener('blur', function() {
+        li.children[0].textContent = this.value;
+        li.children[1].disabled = false;
     })
-})
+});
+
