@@ -35,11 +35,11 @@ li {
     justify-content: center;
 }
 
-.topical {
+.curent {
     margin: 0px 2em;
 }
 
-.block-text{
+.all-text{
     border: 2px solid blue;
     padding: 0;
 }
