@@ -36,12 +36,16 @@ btn.addEventListener('click', function addtext() {
         
         if(statusReg === true) {
             imgActive.classList.add('fadeInLeftBig');
+            picture.style.display = 'flex';
+            imgActive.classList.remove('end-animait');
             setTimeout(()=> {
-                imgActive.classList.add('fadeOutRightBig')
+                imgActive.classList.add('fadeOutRightBig');
             },6000);
             setTimeout(() => {
                 imgActive.classList.add('end-animait');
                 picture.style.display = 'none';
+                imgActive.classList.remove('fadeInLeftBig');
+                imgActive.classList.remove('fadeOutRightBig');
             }, 9000);
         }
         
