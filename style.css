@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -30,6 +31,7 @@ li {
     width: 70rem;
     margin: 0 auto;
     margin-top: 3rem;
+    overflow: hidden;
 }
 
 .block {
@@ -56,7 +58,10 @@ li {
     border-bottom: 1px solid #ccc;
 }
 
-.add-text, .all, .curent, .ending {
+.add-text,
+.all,
+.curent,
+.ending {
     width: 7rem;
     height: 2.5rem;
     font-size: 1.3rem;
@@ -68,6 +73,29 @@ li {
     margin-left: 1rem;
 }
 
+.ending:active {
+    width: 6.9rem;
+    height: 2.4rem;
+    background: #1694be;
+}
+
+.curent:active {
+    width: 6.9rem;
+    height: 2.4rem;
+    background: #1694be;
+}
+
+.all:active {
+    width: 6.9rem;
+    height: 2.4rem;
+    background: #1694be;
+}
+
+.add-text:active {
+    width: 6.9rem;
+    height: 2.4rem;
+    background: #1694be;
+}
 
 .text-li {
     width: 30rem;
@@ -78,7 +106,8 @@ li {
     word-break: break-all;
 }
 
-.edit, .clear {
+.edit,
+.clear {
     width: 3.5rem;
     height: 2rem;
     position: absolute;
@@ -88,6 +117,19 @@ li {
     border: 2px solid #00bfff;
     border-radius: 5px;
 }
+
+.edit:active {
+    width: 3.4rem;
+    height: 1.9rem;
+    background: #1694be;
+}
+
+.clear:active {
+    width: 3.4rem;
+    height: 1.9rem;
+    background: #1694be;
+}
+
 
 .clear {
     right: 0;
@@ -103,4 +145,107 @@ li {
 
 .look-active {
     display: block;
+}
+
+
+.block-picture {
+    text-align: center;
+    display: none;
+    margin-bottom: 1rem;
+}
+
+.picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture img {
+    width: 10rem;
+}
+
+.text-picture {
+    font-family: 'Passion One', cursive;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.poo {
+    margin-left: -4rem;
+}
+
+.end-animait {
+    position: absolute;
+}
+
+.fadeInLeftBig {
+    display: block;
+    -webkit-animation-name: fadeInLeftBig;
+    animation-name: fadeInLeftBig;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInLeftBig {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-2000px, 0, 0);
+        transform: translate3d(-2000px, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInLeftBig {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-2000px, 0, 0);
+        transform: translate3d(-2000px, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+
+.fadeOutRightBig {
+    -webkit-animation-name: fadeOutRightBig;
+    animation-name: fadeOutRightBig;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeOutRightBig {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translate3d(2000px, 0, 0);
+        transform: translate3d(2000px, 0, 0);
+    }
+}
+
+@keyframes fadeOutRightBig {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translate3d(2000px, 0, 0);
+        transform: translate3d(2000px, 0, 0);
+    }
 }

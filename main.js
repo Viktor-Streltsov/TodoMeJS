@@ -9,6 +9,9 @@ const blockAll = document.querySelector('.all-text');
 const blockCurent = document.querySelector('.curent-text');
 const blockEnding = document.querySelector('.ending-text');
 
+const imgActive = document.querySelector('.block-picture');
+const picture = document.querySelector('.picture');
+
 let arr = [];
 let clearLi = [];
 let curentLi = [];
@@ -27,6 +30,23 @@ btn.addEventListener('click', function addtext() {
             blockAll.append(li);
             textVerifik.push(input.value);
         };
+        // Провверка корней слов
+        let regex = /алко|пив/i;
+        let statusReg= regex.test(input.value);
+        
+        if(statusReg === true) {
+            imgActive.classList.add('fadeInLeftBig');
+            setTimeout(()=> {
+                imgActive.classList.add('fadeOutRightBig')
+            },3000);
+            setTimeout(() => {
+                imgActive.classList.add('end-animait');
+                picture.style.display = 'none';
+            }, 5000);
+        }
+        
+        console.log(statusReg);
+
         input.value = '';
     };
 
