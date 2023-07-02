@@ -38,11 +38,11 @@ btn.addEventListener('click', function addtext() {
             imgActive.classList.add('fadeInLeftBig');
             setTimeout(()=> {
                 imgActive.classList.add('fadeOutRightBig')
-            },3000);
+            },6000);
             setTimeout(() => {
                 imgActive.classList.add('end-animait');
                 picture.style.display = 'none';
-            }, 5000);
+            }, 9000);
         }
         
         console.log(statusReg);
